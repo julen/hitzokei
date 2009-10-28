@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}{{ block.super }} &raquo; Zerrenda osoa{% endblock title %}
+
+{% block content %}
+
+{% if object_list.count %}
+    {% for term in object_list %}
+    <h2>{{ term.name }}</h2>
+    <p>{{ term.meaning }}</p>
+    {% endfor %}
+{% else %}
+    <h2>Ez dago ezer.</h2>
+{% endif%}
+
+{% endblock content %}

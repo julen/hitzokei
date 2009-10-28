@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}{{ block.super }} &raquo; Gehitu termino berria{% endblock title %}
+
+{% block content %}
+<h2>Gehitu termino berria</h2>
+<form action="" method="POST">
+    {% if form.unbound_errors %}
+        {{ form.unbound_errors }}
+    {% endif %}
+    {{ form.as_p }}
+    <p>
+        <input type="submit" value="Gehitu" />
+    </p>
+</form>
+{% endblock content %}
