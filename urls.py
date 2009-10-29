@@ -20,7 +20,7 @@ urlpatterns = patterns('',
      { 'document_root': settings.MEDIA_ROOT }),
 
     (r'^admin/',
-     admin.site.root),
+     include(admin.site.urls)),
 
     (r'^(?P<url>about/?)$',
      'django.contrib.flatpages.views.flatpage',

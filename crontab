@@ -1,5 +1,5 @@
 # Crontab for updating terms.
 # Symlink into /etc/cron.d/
-PYTHONPATH=/home/www/hitzokei/
+PYTHONPATH=/home/www/hitzokei/:/home/www/hitzokei/django-socialdict/
 DJANGO_SETTINGS_MODULE=hitzokei.settings
-15,45 * * * * root python /home/www/hitzokei/django-socialdict/bin/update_terms.py
+15,45 * * * * root python /home/www/hitzokei/django-socialdict/socialdict/bin/update_terms.py
