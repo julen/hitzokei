@@ -83,5 +83,5 @@ INSTALLED_APPS = (
 )
 
 # socialdict settings
-SOCIAL_URL = 'http://search.twitter.com/search.json?q=%23'
+SOCIAL_URL = 'http://search.twitter.com/search.json?rpp=100&q=%23'
 SOCIAL_HASHTAG = 'hitzokei'
