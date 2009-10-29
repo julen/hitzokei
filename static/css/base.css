@@ -83,6 +83,7 @@ ul
 .term-name
 {
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 
