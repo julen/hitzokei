@@ -87,6 +87,13 @@ ul
     text-transform: uppercase;
 }
 
+h2 span.author
+{
+    font-size: 0.6em;
+    font-weight: normal;
+    font-variant: normal;
+}
+
 
 /*
  * FORMS
