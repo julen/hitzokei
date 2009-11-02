@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
+{% load socialdict_tags %}
 
 {% block title %}{{ block.super }} &raquo; Hasiera{% endblock %}
 
 {% block content %}
 
 <h2>Gehitutako azkenak</h2>
-    {% load socialdict_tags %}
     {% render_latest_socialdict_terms 5 %}
 {% endblock content %}
