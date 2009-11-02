@@ -8,7 +8,7 @@
 
 {% if object_list.count %}
     {% for term in object_list %}
-    <h2>{{ term.name }} <a href="http://twitter.com/{{ term.social_user }}/status/{{ term.status_id }}" title="{{ term.name }}"><span class="author">@{{ term.social_user }}</span></a></h2>
+    <h2>{{ term.name|safe }} <a href="http://twitter.com/{{ term.social_user }}/status/{{ term.status_id }}" title="{{ term.date_added }}"><span class="author">@{{ term.social_user }}</span></a></h2>
     <p>{{ term.meaning|safe }}</p>
     {% endfor %}
 {% else %}
