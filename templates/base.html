@@ -6,7 +6,7 @@
         <link type="text/css" rel="stylesheet" href="{{ MEDIA_URL }}css/base.css"/>
     </head>
     <body>
-        <h1><a href="{% url hitzokei_home %}" title="Itzuli hasiera-orrira.">Hitzokei</a></h1>
+        <h1><a href="{% url hitzokei_home %}" title="Itzuli hasiera-orrira.">{% block main_heading %}Hitzokei{% endblock main_heading %}</a></h1>
         <p class="meta">
         Hitzokei: hitz <a href="{% url socialdict_term_archive_index %}" title="Zerrenda osoa">hauek</a> omen
          · Hitza falta? <a href="{% url socialdict_add_term %}" title="Gehitu hitzokei berria">Gehitu berria</a>
