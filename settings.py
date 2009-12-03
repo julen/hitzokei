@@ -82,6 +82,9 @@ INSTALLED_APPS = (
     'socialdict',
 )
 
+# Cache backend (memcached)
+CACHE_BACKEND = 'memcached://127.0.0.1:11211/'
+
 # socialdict settings
 SOCIALDICT_HASHTAG = 'hitzokei'
 SOCIALDICT_BACKENDS = (
