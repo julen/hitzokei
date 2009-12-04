@@ -20,6 +20,7 @@ h3
     background-color: inherit;
     color: #333333;
     font-variant: small-caps;
+    text-shadow: 0 0 1px #666677;
 }
 
 h1 a, h1 a:hover, h1 a:visited,
@@ -92,6 +93,7 @@ h2 span.author
     font-size: 0.6em;
     font-weight: normal;
     font-variant: normal;
+    text-shadow: none;
 }
 
 
