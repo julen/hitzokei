@@ -98,6 +98,57 @@ h2 span.author
 
 
 /*
+ * PAGINATION
+ */
+ul.pagination
+{
+    list-style-type: none;
+    display: inline-block;
+}
+
+ul.pagination li
+{
+    float: left;
+    text-align: center;
+}
+
+ul.pagination li a,
+ul.pagination li a:visited
+{
+    border: 1px solid #000000;
+    text-decoration: none;
+}
+
+ul.pagination li a:hover
+{
+    border: 1px solid #ffffff;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+ul.pagination li span.current,
+ul.pagination li a
+{
+    margin: 0.1em;
+    padding: 0.2em 0.5em;
+}
+
+ul.pagination li a.nth,
+ul.pagination li a.prevnext
+{
+    font-weight: bold;
+}
+
+ul.pagination li span.current
+{
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    font-weight: bold;
+}
+
+
+/*
  * FORMS
  */
 form p input,

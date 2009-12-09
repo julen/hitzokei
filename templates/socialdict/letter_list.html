@@ -15,4 +15,8 @@
     <h2>Ez dago ezer.</h2>
 {% endif%}
 
+{% if is_paginated %}
+{% include "paginator.html" %}
+{% endif %}
+
 {% endblock content %}
