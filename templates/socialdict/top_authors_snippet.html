@@ -1,0 +1,5 @@
+<dl class="top-authors">
+{% for author in top_authors %}
+    <dt>{{ author.contributions }}</dt><dd>{{ author.social_user }}</dd>
+{% endfor %}
+</dl>
