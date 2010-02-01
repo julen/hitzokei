@@ -5,6 +5,9 @@ from django.conf import settings
 from django.contrib import admin
 admin.autodiscover()
 
+from socialdict.feeds import LatestEntriesFeed
+feeds = { 'entries': LatestEntriesFeed }
+
 urlpatterns = patterns('',
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
     # to INSTALLED_APPS to enable admin documentation:
@@ -21,6 +24,10 @@ urlpatterns = patterns('',
 
     (r'^admin/',
      include(admin.site.urls)),
+
+    (r'^feed/(?P<url>.*)/$',
+     'django.contrib.syndication.views.feed',
+     { 'feed_dict': feeds }),
 
     (r'^(?P<url>about/?)$',
      'django.contrib.flatpages.views.flatpage',
