@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 
 import os
+import site
 import sys
+
+site.addsitedir('/srv/www/hitzokei/env/lib/python2.5/site-packages')
 
 sys.path.insert(0, '/srv/www/hitzokei/')
 sys.path.insert(0, '/srv/www/hitzokei/hitzokei/apps/')
