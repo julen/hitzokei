@@ -10,7 +10,7 @@
         <h1><a href="{% url 'hitzokei_home' %}" title="Itzuli hasiera-orrira.">{% block main_heading %}Hitzokei{% endblock main_heading %}</a></h1>
         <p class="meta">
         Hitzokei: hitz hauek omen
-         · Hitza falta? <a href="{% url 'socialdict_add_term' %}" title="Gehitu hitzokei berria">Gehitu berria</a>
+        {% comment %}· Hitza falta? <a href="{% url 'socialdict_add_term' %}" title="Gehitu hitzokei berria">Gehitu berria</a>{% endcomment %}
          · Zalantzak? <a href="{% url 'hitzokei_about' 'about' %}" title="Webgune honi buruzko argibideak">Honi buruz</a>
         </p>
 
