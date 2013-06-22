@@ -7,7 +7,6 @@ from django.contrib import admin
 admin.autodiscover()
 
 from socialdict.feeds import LatestEntriesFeed
-feeds = { 'entries': LatestEntriesFeed }
 
 
 urlpatterns = patterns('',
@@ -22,9 +21,9 @@ urlpatterns = patterns('',
     (r'^admin/',
      include(admin.site.urls)),
 
-    (r'^feed/(?P<url>.*)/$',
-     'django.contrib.syndication.views.feed',
-     { 'feed_dict': feeds }),
+    url(r'^feed/entries/$',
+        LatestEntriesFeed(),
+        name='hitzokei-feed'),
 
     (r'^(?P<url>about/?)$',
      'django.contrib.flatpages.views.flatpage',
