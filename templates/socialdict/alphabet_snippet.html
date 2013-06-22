@@ -1,5 +1,5 @@
 <ul>
 {% for entry in alphabet %}
-    <li><a href="{% url socialdict.views.letter entry.letter %}" title="{{ entry.count }}">{{ entry.letter }}</a></li>
+    <li><a href="{% url 'socialdict_letter_view' entry.letter %}" title="{{ entry.count }}">{{ entry.letter }}</a></li>
 {% endfor %}
 </ul>

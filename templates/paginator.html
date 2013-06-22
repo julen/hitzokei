@@ -1,17 +1,17 @@
 <ul class="pagination">
     {% if page_obj.has_previous %}
-        <li><a href="{% url socialdict_letter_view letter %}" class="nth">lehena</a></li>
-        <li><a href="{% url socialdict_letter_view_page letter page_obj.previous_page_number %}" class="prevnext">aurrekoa</a></li>
+        <li><a href="{% url 'socialdict_letter_view' letter %}" class="nth">lehena</a></li>
+        <li><a href="{% url 'socialdict_letter_view_page' letter page_obj.previous_page_number %}" class="prevnext">aurrekoa</a></li>
     {% endif %}
     {% for page in paginator.page_range %}
         {% ifequal page page_obj.number %}
             <li><span class="current">{{ page }}</span></li>
         {% else %}
-            <li><a href="{% url socialdict_letter_view_page letter page %}" class="pagenumber">{{ page }}</a></li>
+            <li><a href="{% url 'socialdict_letter_view_page' letter page %}" class="pagenumber">{{ page }}</a></li>
         {% endifequal %}
     {% endfor %}
     {% if page_obj.has_next %}
-        <li><a href="{% url socialdict_letter_view_page letter page_obj.next_page_number %}" class="prevnext">hurrengoa</a></li>
-        <li><a href="{% url socialdict_letter_view_page letter paginator.num_pages %}" class="nth">azkena</a></li>
+        <li><a href="{% url 'socialdict_letter_view_page' letter page_obj.next_page_number %}" class="prevnext">hurrengoa</a></li>
+        <li><a href="{% url 'socialdict_letter_view_page' letter paginator.num_pages %}" class="nth">azkena</a></li>
     {% endif %}
 </ul>
