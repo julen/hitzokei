@@ -9,11 +9,8 @@ admin.autodiscover()
 from socialdict.feeds import LatestEntriesFeed
 feeds = { 'entries': LatestEntriesFeed }
 
-urlpatterns = patterns('',
-    # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
-    # to INSTALLED_APPS to enable admin documentation:
-    # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
+urlpatterns = patterns('',
     url(r'^$',
         TemplateView.as_view(template_name='homepage.html'),
         name='hitzokei_home'),
