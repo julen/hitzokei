@@ -9,11 +9,8 @@
     <body>
         <h1><a href="{% url 'hitzokei_home' %}" title="Itzuli hasiera-orrira.">{% block main_heading %}Hitzokei{% endblock main_heading %}</a></h1>
         <p class="meta">
-        Hitzokei: hitz hauek omen
-        {% comment %}· Hitza falta? <a href="{% url 'socialdict_add_term' %}" title="Gehitu hitzokei berria">Gehitu berria</a>{% endcomment %}
-         · Zalantzak? <a href="{% url 'hitzokei_about' 'about' %}" title="Webgune honi buruzko argibideak">Honi buruz</a>
+            {% render_socialdict_totals %}
         </p>
-
         <div id="alphabet">
             {% render_socialdict_alphabet %}
         </div>
@@ -21,7 +18,8 @@
         {% block content %}{% endblock content %}
 
         <p class="meta">
-            {% render_socialdict_totals %}
+        {% comment %}· Hitza falta? <a href="{% url 'socialdict_add_term' %}" title="Gehitu hitzokei berria">Gehitu berria</a>{% endcomment %}
+        <a href="{% url 'hitzokei_about' 'about' %}" title="Webgune honi buruzko argibideak">Honi buruz</a>
         </p>
     </body>
 </html>
