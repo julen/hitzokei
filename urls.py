@@ -1,5 +1,6 @@
 from django.conf.urls import include, patterns, url
 from django.conf import settings
+from django.views.generic import TemplateView
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -13,10 +14,9 @@ urlpatterns = patterns('',
     # to INSTALLED_APPS to enable admin documentation:
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
-    (r'^$',
-     'django.views.generic.simple.direct_to_template',
-     { 'template': 'homepage.html' },
-     'hitzokei_home'),
+    url(r'^$',
+        TemplateView.as_view(template_name='homepage.html'),
+        name='hitzokei_home'),
 
     (r'^static/(?P<path>.*)$',
      'django.views.static.serve',
