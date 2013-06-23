@@ -9,6 +9,8 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+ALLOWED_HOSTS = ['109.74.196.215']
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
