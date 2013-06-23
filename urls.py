@@ -25,10 +25,10 @@ urlpatterns = patterns('',
         LatestEntriesFeed(),
         name='hitzokei-feed'),
 
-    url(r'^(?P<url>about/?)$',
+    url(r'^(?P<url>honi-buruz/?)$',
         'django.contrib.flatpages.views.flatpage',
         name='hitzokei_about'),
 
-    (r'',
+    (r'glosarioa/',
      include('socialdict.urls')),
 )
