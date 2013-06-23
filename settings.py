@@ -9,7 +9,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-ALLOWED_HOSTS = ['109.74.196.215']
+ALLOWED_HOSTS = ['109.74.196.215', 'hitzokei.tximinia.net']
 
 DATABASES = {
     'default': {
